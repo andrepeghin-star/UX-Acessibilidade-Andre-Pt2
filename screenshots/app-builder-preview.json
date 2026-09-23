@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Guia Digital Seguro",
+      "hasCanvas": false,
+      "bodyTextLen": 3996,
+      "bodyTextHash": "3aa4aeada73440fe59e257a7d9d1a4c0bd326ca4eb4f5beae97e49d803187242",
+      "bodyTextPrefix": "Pular para o conteúdo Acessibilidade A- A A+ Contraste Pausar PR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Guia Digital Seguro",
+      "hasCanvas": false,
+      "bodyTextLen": 3996,
+      "bodyTextHash": "3aa4aeada73440fe59e257a7d9d1a4c0bd326ca4eb4f5beae97e49d803187242",
+      "bodyTextPrefix": "Pular para o conteúdo Acessibilidade A- A A+ Contraste Pausar PR",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
