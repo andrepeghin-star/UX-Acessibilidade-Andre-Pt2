@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regras de Ouro - Guia Digital Seguro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="page">
+    <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+      <span class="accessibility-title"><strong>Acessibilidade:</strong></span>
+      <div class="accessibility-controls">
+        <button class="btn-accessibility" onclick="changeFontSize(-1)" title="Diminuir tamanho do texto" aria-label="Diminuir tamanho do texto">A-</button>
+        <button class="btn-accessibility" onclick="resetFontSize()" title="Tamanho normal do texto" aria-label="Tamanho normal do texto">A</button>
+        <button class="btn-accessibility" onclick="changeFontSize(1)" title="Aumentar tamanho do texto" aria-label="Aumentar tamanho do texto">A+</button>
+        <button class="btn-accessibility" onclick="toggleHighContrast()" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">◐ Contraste</button>
+        <button class="btn-accessibility" id="btn-dark" onclick="toggleDarkMode()" title="Alternar modo escuro" aria-label="Ativar modo escuro" aria-pressed="false">Escuro</button>
+        <button class="btn-accessibility" id="btn-motion" onclick="toggleMotion()" title="Pausar movimento do fundo" aria-label="Pausar movimento do fundo">Pausar</button>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Regras de Ouro</span>
+    </nav>
+    <header>
+      <h1>As 3 Regras de Ouro</h1>
+      <p>Três hábitos simples que reduzem muito o risco de cair em golpes digitais.</p>
+    </header>
+    <main>
+      <section class="card">
+        <h2>
+          <span>Memorize e pratique</span>
+          <button class="btn btn-audio" onclick="readText('r-main')" aria-label="Ouvir esta seção">Ouvir</button>
+        </h2>
+        <div id="r-main">
+          <figure class="figure-card" aria-label="Ilustração das três regras">
+  <svg width="280" height="160" viewBox="0 0 280 160" role="img" aria-hidden="true">
+    <rect width="280" height="160" rx="16" fill="#1f4a3e"/>
+    <circle cx="70" cy="80" r="28" fill="#f4f0e6"/><text x="62" y="88" fill="#1f4a3e" font-size="28" font-weight="bold" font-family="Segoe UI, Arial">1</text>
+    <circle cx="140" cy="80" r="28" fill="#f4f0e6"/><text x="132" y="88" fill="#1f4a3e" font-size="28" font-weight="bold" font-family="Segoe UI, Arial">2</text>
+    <circle cx="210" cy="80" r="28" fill="#f4f0e6"/><text x="202" y="88" fill="#1f4a3e" font-size="28" font-weight="bold" font-family="Segoe UI, Arial">3</text>
+    <text x="55" y="140" fill="#f4f0e6" font-size="13" font-family="Segoe UI, Arial">Três hábitos simples protegem você</text>
+  </svg>
+  <figcaption>Ilustração: as três regras de ouro — não dar senha, desligar e retornar, não agir com pressa.</figcaption>
+</figure>
+          <ol class="steps-list">
+            <li><strong>Nunca informe senhas ou códigos por telefone.</strong> Bancos e órgãos oficiais não pedem senha, código de SMS nem confirmação de segurança por ligação.</li>
+            <li><strong>Desligue e retorne a ligação.</strong> Se alguém se apresentar como banco, desligue, pegue o cartão e ligue para o número oficial do verso.</li>
+            <li><strong>Não aja com pressa.</strong> Criminosos usam medo e urgência. Respire, avise alguém de confiança e só então decida.</li>
+          </ol>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Por que a pressa é o pior inimigo</h2>
+        <p>Quase todo golpe pede ação imediata: em 10 minutos sua conta será bloqueada, seu filho precisa do Pix agora. A pressa impede a verificação.</p>
+        <div class="tip-box">
+          <h3>Frase para lembrar</h3>
+          <p><strong>Na dúvida, desligo e confirmo.</strong></p>
+        </div>
+      </section>
+      <div class="page-actions">
+        <a class="btn" href="index.html">Voltar ao início</a>
+        <a class="btn" href="simulador.html">Treinar no simulador</a>
+      </div>
+    </main>
+    <footer>
+      <p><strong>Guia Digital Seguro</strong> — desenvolvido para proteger e empoderar a terceira idade na internet.</p>
+      <p>Compartilhe este conhecimento com seus amigos e familiares.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
