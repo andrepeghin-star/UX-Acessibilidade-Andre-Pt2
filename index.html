@@ -7,10 +7,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <canvas id="scene" aria-hidden="true"></canvas>
   <div class="vignette" aria-hidden="true"></div>
-
   <div class="page">
     <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
       <span class="accessibility-title"><strong>Acessibilidade:</strong></span>
@@ -19,24 +17,22 @@
         <button class="btn-accessibility" onclick="resetFontSize()" title="Tamanho normal do texto" aria-label="Tamanho normal do texto">A</button>
         <button class="btn-accessibility" onclick="changeFontSize(1)" title="Aumentar tamanho do texto" aria-label="Aumentar tamanho do texto">A+</button>
         <button class="btn-accessibility" onclick="toggleHighContrast()" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">◐ Contraste</button>
+        <button class="btn-accessibility" id="btn-dark" onclick="toggleDarkMode()" title="Alternar modo escuro" aria-label="Ativar modo escuro" aria-pressed="false">Escuro</button>
         <button class="btn-accessibility" id="btn-motion" onclick="toggleMotion()" title="Pausar movimento do fundo" aria-label="Pausar movimento do fundo">Pausar</button>
       </div>
     </div>
-
     <header>
       <h1>Guia Digital Seguro</h1>
       <p>Aprenda a navegar na internet com tranquilidade, reconhecer golpes digitais e se proteger contra fraudes de inteligência artificial.</p>
     </header>
-
     <main>
       <nav class="nav-buttons" aria-label="Navegação rápida de seções">
-        <a href="#ia-golpes" class="nav-card">Golpes de IA (Voz e Vídeo)</a>
-        <a href="#golpes-comuns" class="nav-card">Golpes do Dia a Dia</a>
-        <a href="#regras-ouro" class="nav-card">3 Regras de Ouro</a>
-        <a href="#simulador" class="nav-card">Teste Seus Conhecimentos</a>
-        <a href="#emergencia" class="nav-card nav-card-alert">Fui Vítima? O que fazer</a>
+        <a href="ia.html" class="nav-card">Golpes de IA (Voz e Vídeo)</a>
+        <a href="golpes.html" class="nav-card">Golpes do Dia a Dia</a>
+        <a href="regras.html" class="nav-card">3 Regras de Ouro</a>
+        <a href="simulador.html" class="nav-card">Teste Seus Conhecimentos</a>
+        <a href="emergencia.html" class="nav-card nav-card-alert">Fui Vítima? O que fazer</a>
       </nav>
-
       <section id="ia-golpes" class="card">
         <h2>
           <span>Como Reconhecer Golpes com Inteligência Artificial (IA)</span>
@@ -44,48 +40,28 @@
         </h2>
         <div id="ia-content">
           <p>Atualmente, criminosos utilizam programas avançados de computador (Inteligência Artificial) para imitar a <strong>voz</strong> e até o <strong>rosto</strong> de parentes, amigos e pessoas conhecidas.</p>
-
           <div class="alert-box">
             <h3>Atenção: nem tudo que você ouve ou vê na tela é real</h3>
             <p>Os golpistas conseguem criar áudios com a voz idêntica à de um familiar pedindo dinheiro em situação de emergência.</p>
           </div>
-
-          <div class="ia-feature-grid">
-            <div class="ia-card">
-              <h4>Clonagem de Voz</h4>
-              <p><strong>Como funciona:</strong> Você recebe uma ligação ou mensagem de áudio no WhatsApp. A voz é igual à do seu filho ou neto dizendo que sofreu um acidente ou precisa pagar uma conta urgente.</p>
-              <p><strong>Como identificar:</strong> A voz pode parecer ligeiramente robótica, com pausas incomuns ou ruídos estranhos. A ligação é sempre feita em tom de extrema urgência.</p>
-            </div>
-
-            <div class="ia-card">
-              <h4>Vídeos Falsos (Deepfake)</h4>
-              <p><strong>Como funciona:</strong> Um vídeo de um médico famoso, apresentador de TV ou do seu banco aparece nas redes sociais prometendo prêmios, remédios milagrosos ou desconto em dívidas.</p>
-              <p><strong>Como identificar:</strong> Observe a boca da pessoa: o movimento dos lábios costuma não coincidir perfeitamente com a fala, e o piscar de olhos pode parecer artificial.</p>
-            </div>
-          </div>
-
-          <div class="tip-box">
-            <h3>A regra da palavra-chave familiar</h3>
-            <p>Combine com sua família uma <strong>palavra secreta</strong> que só vocês conheçam (exemplo: <em>Biscoito de Fubá</em>). Se alguém ligar pedindo dinheiro, solicite a palavra secreta. Se não souberem, desligue imediatamente.</p>
+          <p>Na página completa você encontra exemplos detalhados, sinais de alerta e a regra da palavra-chave familiar.</p>
+          <div class="page-actions">
+            <a class="btn" href="ia.html">Ler página completa sobre Golpes de IA</a>
           </div>
         </div>
       </section>
-
       <section id="golpes-comuns" class="card">
         <h2>
           <span>Golpes Digitais Frequentes no Dia a Dia</span>
           <button class="btn btn-audio" onclick="readText('comuns-content')" aria-label="Ouvir conteúdo sobre Golpes Frequentes">Ouvir</button>
         </h2>
         <div id="comuns-content">
-          <p>Fique atento aos truques mais utilizados por golpistas na internet e no celular:</p>
-          <ul class="info-list">
-            <li><strong>Falso Parente no WhatsApp:</strong> Mensagem recebida de um número desconhecido utilizando a foto de um familiar dizendo: <em>Troquei de número, salve aí</em>. Logo em seguida, pede um Pix.</li>
-            <li><strong>Falso Funcionário de Banco:</strong> Ligação informando sobre compras suspeitas no seu cartão e solicitando senhas, confirmação de dados ou transferências de teste.</li>
-            <li><strong>Links de Prêmios e Benefícios:</strong> Mensagens afirmando que você ganhou um prêmio ou que seu benefício foi bloqueado, solicitando cliques em links suspeitos.</li>
-          </ul>
+          <p>Fique atento aos truques mais utilizados por golpistas na internet e no celular: falso parente no WhatsApp, falso funcionário de banco e links de prêmios ou benefícios.</p>
+          <div class="page-actions">
+            <a class="btn" href="golpes.html">Ler página completa sobre Golpes do Dia a Dia</a>
+          </div>
         </div>
       </section>
-
       <section id="regras-ouro" class="card">
         <h2>
           <span>As 3 Regras de Ouro para sua Segurança</span>
@@ -93,46 +69,36 @@
         </h2>
         <div id="regras-content">
           <ol class="rules-list">
-            <li><strong>NUNCA informe senhas ou códigos por telefone:</strong> Bancos e órgãos oficiais jamais solicitam senhas ou códigos enviados por SMS.</li>
-            <li><strong>DESLIGUE e retorne a ligação:</strong> Caso receba uma ligação do banco, desligue. Pegue seu cartão, verifique o telefone oficial no verso e ligue você mesmo.</li>
-            <li><strong>NÃO aja com pressa:</strong> Os criminosos usam o medo e o senso de urgência. Respire fundo e converse com alguém de confiança antes de realizar qualquer transferência.</li>
+            <li><strong>NUNCA informe senhas ou códigos por telefone.</strong></li>
+            <li><strong>DESLIGUE e retorne a ligação</strong> pelo número oficial.</li>
+            <li><strong>NÃO aja com pressa</strong> — confirme com alguém de confiança.</li>
           </ol>
+          <div class="page-actions">
+            <a class="btn" href="regras.html">Ler página completa das Regras de Ouro</a>
+          </div>
         </div>
       </section>
-
       <section id="simulador" class="card">
         <h2>Teste Seus Conhecimentos (Simulador)</h2>
-        <p>Clique na opção correta para treinar o que aprendeu:</p>
-        <div class="quiz-container">
-          <p class="quiz-question"><strong>Situação:</strong> Você recebe uma ligação de alguém com a voz idêntica à do seu filho, chorando e dizendo que perdeu o celular e precisa de um Pix urgente de R$ 500 para uma conta desconhecida.</p>
-          <p><strong>O que você deve fazer?</strong></p>
-          <button class="quiz-option" onclick="checkQuiz(1)">A) Fazer o Pix imediatamente para ajudar meu filho.</button>
-          <button class="quiz-option" onclick="checkQuiz(2)">B) Manter a calma, desligar a ligação, ligar para o número antigo do meu filho ou pedir a palavra-chave secreta.</button>
-          <button class="quiz-option" onclick="checkQuiz(3)">C) Enviar os dados do meu cartão de crédito por mensagem para resolver logo.</button>
-          <div id="quiz-feedback" class="feedback-box" style="display: none;"></div>
+        <p>Pratique situações reais de golpe e veja a resposta segura.</p>
+        <div class="page-actions">
+          <a class="btn" href="simulador.html">Abrir o simulador completo</a>
         </div>
       </section>
-
       <section id="emergencia" class="card card-emergency">
         <h2>Fui Vítima de um Golpe? Mantenha a Calma e Siga os Passos</h2>
-        <p>Se você realizou transferências ou forneceu senhas, tome estas providências imediatamente:</p>
-        <ol class="emergency-list">
-          <li><strong>Ligue imediatamente para o seu Banco:</strong> Solicite o bloqueio de contas/cartões e peça o acionamento do MED (Mecanismo Especial de Devolução do Pix).</li>
-          <li><strong>Comunique sua família:</strong> Informe o ocorrido para evitar que outros contatos sejam abordados.</li>
-          <li><strong>Registre um B.O. (Boletim de Ocorrência):</strong> Procure a Delegacia de Polícia Civil mais próxima ou faça o registro online com o auxílio de alguém de confiança.</li>
-        </ol>
-        <div class="emergency-action">
+        <p>Se você realizou transferências ou forneceu senhas, aja com calma e siga os passos oficiais de bloqueio e denúncia.</p>
+        <div class="page-actions">
+          <a class="btn btn-alert" href="emergencia.html">Ver o que fazer em emergência</a>
           <a href="tel:190" class="btn btn-alert">Ligar para a Polícia (190)</a>
         </div>
       </section>
     </main>
-
     <footer>
       <p><strong>Guia Digital Seguro</strong> — desenvolvido para proteger e empoderar a terceira idade na internet.</p>
       <p>Compartilhe este conhecimento com seus amigos e familiares.</p>
     </footer>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
