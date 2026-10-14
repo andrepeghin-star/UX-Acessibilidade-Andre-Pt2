@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador - Guia Digital Seguro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-extra.css">
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="page">
+    <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+      <span class="accessibility-title"><strong>Acessibilidade:</strong></span>
+      <div class="accessibility-controls">
+        <button class="btn-accessibility" onclick="changeFontSize(-1)" title="Diminuir tamanho do texto" aria-label="Diminuir tamanho do texto">A-</button>
+        <button class="btn-accessibility" onclick="resetFontSize()" title="Tamanho normal do texto" aria-label="Tamanho normal do texto">A</button>
+        <button class="btn-accessibility" onclick="changeFontSize(1)" title="Aumentar tamanho do texto" aria-label="Aumentar tamanho do texto">A+</button>
+        <button class="btn-accessibility" onclick="toggleHighContrast()" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">◐ Contraste</button>
+        <button class="btn-accessibility" id="btn-dark" onclick="toggleDarkMode()" title="Alternar modo escuro" aria-label="Ativar modo escuro" aria-pressed="false">Escuro</button>
+        <button class="btn-accessibility" id="btn-motion" onclick="toggleMotion()" title="Pausar movimento do fundo" aria-label="Pausar movimento do fundo">Pausar</button>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Simulador</span>
+    </nav>
+    <header>
+      <h1>Teste seus conhecimentos</h1>
+      <p>Leia cada situação com calma e escolha a opção mais segura.</p>
+    </header>
+    <main>
+      <section class="card">
+        <h2>Como usar o simulador</h2>
+        <figure class="figure-card" aria-label="Ilustração do simulador">
+  <svg width="280" height="160" viewBox="0 0 280 160" role="img" aria-hidden="true">
+    <rect width="280" height="160" rx="16" fill="#245e72"/>
+    <rect x="40" y="35" width="200" height="90" rx="12" fill="#f4f0e6"/>
+    <text x="55" y="70" fill="#1c1b18" font-size="16" font-family="Segoe UI, Arial">O que você faria?</text>
+    <rect x="55" y="85" width="170" height="14" rx="4" fill="#1f4a3e" opacity="0.25"/>
+    <rect x="55" y="105" width="140" height="14" rx="4" fill="#1f4a3e" opacity="0.15"/>
+  </svg>
+  <figcaption>Ilustração: pratique escolhas seguras antes de enfrentar uma situação real.</figcaption>
+</figure>
+        <p>Não há nota. O objetivo é treinar o reflexo certo: desligar, confirmar e não agir com pressa.</p>
+      </section>
+      <section class="card">
+        <h2>Situação 1 — Voz do filho</h2>
+        <div class="quiz-container">
+          <p class="quiz-question"><strong>Situação:</strong> Ligação com a voz idêntica à do seu filho pedindo Pix urgente de R$ 500 para conta desconhecida.</p>
+          <p><strong>O que você deve fazer?</strong></p>
+          <button class="quiz-option" onclick="checkQuiz(1)">A) Fazer o Pix imediatamente para ajudar.</button>
+          <button class="quiz-option" onclick="checkQuiz(2)">B) Desligar, ligar no número antigo ou pedir a palavra-chave secreta.</button>
+          <button class="quiz-option" onclick="checkQuiz(3)">C) Enviar os dados do cartão por mensagem para resolver logo.</button>
+          <div id="quiz-feedback" class="feedback-box" style="display: none;"></div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Situação 2 — Número novo no WhatsApp</h2>
+        <div class="quiz-container">
+          <p class="quiz-question"><strong>Situação:</strong> Número desconhecido com foto do neto: Troquei de número, preciso de um Pix rápido.</p>
+          <p><strong>O que você deve fazer?</strong></p>
+          <button class="quiz-option" onclick="checkQuiz2(1)">A) Salvar o número e enviar o valor pedido.</button>
+          <button class="quiz-option" onclick="checkQuiz2(2)">B) Não pagar; confirmar pelo número antigo ou com outro familiar.</button>
+          <button class="quiz-option" onclick="checkQuiz2(3)">C) Responder pedindo mais dados do neto na mesma conversa e já transferir.</button>
+          <div id="quiz-feedback-2" class="feedback-box" style="display: none;"></div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Situação 3 — Ligação do banco</h2>
+        <div class="quiz-container">
+          <p class="quiz-question"><strong>Situação:</strong> Alguém diz ser do banco, fala de compra estranha e pede o código que chegou por SMS.</p>
+          <p><strong>O que você deve fazer?</strong></p>
+          <button class="quiz-option" onclick="checkQuiz3(1)">A) Informar o código para cancelar a compra.</button>
+          <button class="quiz-option" onclick="checkQuiz3(2)">B) Desligar e ligar para o número oficial no verso do cartão.</button>
+          <button class="quiz-option" onclick="checkQuiz3(3)">C) Instalar o aplicativo que a pessoa indicar por mensagem.</button>
+          <div id="quiz-feedback-3" class="feedback-box" style="display: none;"></div>
+        </div>
+      </section>
+      <div class="page-actions">
+        <a class="btn" href="index.html">Voltar ao início</a>
+        <a class="btn" href="regras.html">Rever as Regras de Ouro</a>
+      </div>
+    </main>
+    <footer>
+      <p><strong>Guia Digital Seguro</strong> — desenvolvido para proteger e empoderar a terceira idade na internet.</p>
+      <p>Compartilhe este conhecimento com seus amigos e familiares.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <script src="script-extra.js"></script>
+</body>
+</html>
