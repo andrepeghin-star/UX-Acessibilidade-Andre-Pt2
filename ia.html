@@ -1,1 +1,108 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golpes de IA - Guia Digital Seguro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-extra.css">
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="page">
+    <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+      <span class="accessibility-title"><strong>Acessibilidade:</strong></span>
+      <div class="accessibility-controls">
+        <button class="btn-accessibility" onclick="changeFontSize(-1)" title="Diminuir tamanho do texto" aria-label="Diminuir tamanho do texto">A-</button>
+        <button class="btn-accessibility" onclick="resetFontSize()" title="Tamanho normal do texto" aria-label="Tamanho normal do texto">A</button>
+        <button class="btn-accessibility" onclick="changeFontSize(1)" title="Aumentar tamanho do texto" aria-label="Aumentar tamanho do texto">A+</button>
+        <button class="btn-accessibility" onclick="toggleHighContrast()" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">◐ Contraste</button>
+        <button class="btn-accessibility" id="btn-dark" onclick="toggleDarkMode()" title="Alternar modo escuro" aria-label="Ativar modo escuro" aria-pressed="false">Escuro</button>
+        <button class="btn-accessibility" id="btn-motion" onclick="toggleMotion()" title="Pausar movimento do fundo" aria-label="Pausar movimento do fundo">Pausar</button>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <a href="index.html">Início</a> <span aria-hidden="true">›</span> <span>Golpes de IA</span>
+    </nav>
+    <header>
+      <h1>Golpes com Inteligência Artificial</h1>
+      <p>Entenda clonagem de voz, deepfake e como se proteger com a palavra-chave familiar.</p>
+    </header>
+    <main>
+      <section class="card">
+        <h2>
+          <span>O que é um golpe com IA?</span>
+          <button class="btn btn-audio" onclick="readText('ia-main')" aria-label="Ouvir esta seção">Ouvir</button>
+        </h2>
+        <div id="ia-main">
+          <p>Inteligência Artificial (IA) é um programa de computador capaz de imitar voz, rosto e estilo de fala de pessoas reais. Criminosos usam isso para gerar ligações, áudios e vídeos que parecem autênticos.</p>
+          <p>O objetivo quase sempre é o mesmo: criar <strong>medo e urgência</strong> para que você transfira dinheiro ou entregue senhas sem conferir.</p>
+          <figure class="figure-card" aria-label="Ilustração de alerta de clonagem de voz">
+  <svg width="280" height="160" viewBox="0 0 280 160" role="img" aria-hidden="true">
+    <rect width="280" height="160" rx="16" fill="#1f4a3e"/>
+    <circle cx="90" cy="70" r="28" fill="#f4f0e6"/>
+    <rect x="70" y="100" width="40" height="28" rx="12" fill="#f4f0e6"/>
+    <path d="M140 55c18 0 32 14 32 32s-14 32-32 32" stroke="#5ecfad" stroke-width="6" fill="none"/>
+    <path d="M155 45c28 0 50 22 50 50s-22 50-50 50" stroke="#f4f0e6" stroke-width="4" fill="none" opacity="0.6"/>
+    <text x="140" y="145" fill="#f4f0e6" font-size="14" font-family="Segoe UI, Arial">Voz clonada — confirme sempre</text>
+  </svg>
+  <figcaption>Ilustração: ligações com voz igual à de um familiar podem ser fabricadas por IA.</figcaption>
+</figure>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Clonagem de voz — sinais de alerta</h2>
+        <div class="topic-grid">
+          <div class="topic-block">
+            <h3>Como costuma começar</h3>
+            <p>Ligação ou áudio no WhatsApp com a voz de filho, neto ou amigo pedindo Pix urgente por acidente, dívida ou problema com a polícia.</p>
+          </div>
+          <div class="topic-block">
+            <h3>Sinais suspeitos</h3>
+            <p>Voz um pouco robótica, pausas estranhas, ruído de fundo artificial e pressão extrema para agir agora.</p>
+          </div>
+          <div class="topic-block">
+            <h3>O que fazer</h3>
+            <p>Desligue. Ligue você mesmo para o número antigo do familiar. Peça a <strong>palavra-chave secreta</strong> combinada em família.</p>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Vídeos falsos (deepfake)</h2>
+        <figure class="figure-card" aria-label="Ilustração de vídeo falso">
+  <svg width="280" height="160" viewBox="0 0 280 160" role="img" aria-hidden="true">
+    <rect width="280" height="160" rx="16" fill="#245e72"/>
+    <rect x="50" y="30" width="180" height="100" rx="10" fill="#0d1a22"/>
+    <circle cx="120" cy="75" r="22" fill="#f4f0e6"/>
+    <path d="M95 110c10-16 40-16 50 0" stroke="#f4f0e6" stroke-width="4" fill="none"/>
+    <rect x="165" y="55" width="40" height="28" rx="4" fill="#b42318"/>
+    <text x="172" y="74" fill="#fff" font-size="12" font-family="Segoe UI, Arial">FAKE</text>
+    <text x="70" y="148" fill="#f4f0e6" font-size="13" font-family="Segoe UI, Arial">Deepfake: boca e olhos podem falhar</text>
+  </svg>
+  <figcaption>Ilustração: vídeos falsos costumam falhar no movimento da boca e no piscar dos olhos.</figcaption>
+</figure>
+        <ul class="info-list">
+          <li>Promessas de prêmios, remédios milagrosos ou descontos de banco em vídeo de pessoas famosas.</li>
+          <li>Lábios que não batem com a fala e piscar de olhos artificial.</li>
+          <li>Links estranhos abaixo do vídeo pedindo dados ou pagamento.</li>
+        </ul>
+        <div class="tip-box">
+          <h3>Regra da palavra-chave familiar</h3>
+          <p>Combine uma palavra secreta (por exemplo, <em>Biscoito de Fubá</em>). Se alguém do familiar pedir dinheiro e não souber a palavra, desligue imediatamente.</p>
+        </div>
+      </section>
+      <div class="page-actions">
+        <a class="btn" href="index.html">Voltar ao início</a>
+        <a class="btn" href="regras.html">Ver as 3 Regras de Ouro</a>
+      </div>
+    </main>
+    <footer>
+      <p><strong>Guia Digital Seguro</strong> — desenvolvido para proteger e empoderar a terceira idade na internet.</p>
+      <p>Compartilhe este conhecimento com seus amigos e familiares.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <script src="script-extra.js"></script>
+</body>
+</html>
